@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lead status:</strong>
+  <%= @client.lead_status %>
+</p>
+
+<p>
+  <strong>Lead source:</strong>
+  <%= @client.lead_source %>
+</p>
+
+<p>
+  <strong>Project address:</strong>
+  <%= @client.project_address %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @client.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Type of project:</strong>
+  <%= @client.type_of_project %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @client.payment_method %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

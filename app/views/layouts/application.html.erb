@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <title>SpotStop</title> -->
+
+    <% if @page_title.present? %>
+      <title>General Contracting App | <%= "#{@page_title}"%></title>
+    <% else %>
+      <title>General Contracting App</title>
+    <% end %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+
+  <body class="bg-indigo-100">
+
+
+      <%= render "layouts/nav" %>
+
+      <% if notice.present? || alert.present? %>
+        <div id="fadeAway" class="text-center">
+          <br>
+          <br>
+          <p class="notice" id="notice" style="color:green; font-size:200%;">
+            <%= notice %>
+          </p>
+          <p class="alert" id="alert" style="color:red; font-size:200%;">
+            <%= alert %>
+          </p>
+        </div>
+      <% end %>
+
+      <div class="py-5 p-2">
+
+
+          <div class="card container p-4">
+          <br>
+          <%= yield %>
+          </div>
+            <div class="text-center">
+              <br>
+            <% if @hide_back_button != true %>
+            <%= link_to 'Back', :back, class:"btn btn-primary", style: 'color:#FFFFFF;' %>
+            <% end %>
+
+            </div>
+      </div>
+
+  </body>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Fade out Notice and Alert -->
+  <script type="text/javascript">
+    $( "#fadeAway" ).delay(1000).fadeOut( "slow", function() {
+    });
+  </script>
+
+
+</html>

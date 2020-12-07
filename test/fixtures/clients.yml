@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lead_status: MyString
+  lead_source: MyString
+  project_address: MyString
+  phone_number: 1
+  email: MyString
+  type_of_project: MyString
+  payment_method: MyString
+
+two:
+  lead_status: MyString
+  lead_source: MyString
+  project_address: MyString
+  phone_number: 1
+  email: MyString
+  type_of_project: MyString
+  payment_method: MyString
