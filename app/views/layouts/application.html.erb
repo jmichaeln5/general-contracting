@@ -46,9 +46,13 @@
         </div>
       <% end %>
 
+      <span class="pl-4">
+        <% if user_signed_in? %>
+            <%= link_to "Welcome #{current_user.email}", root_path %>
+        <% end %>
+      </span>
+
       <div class="py-5 p-2">
-
-
           <div class="card container p-4">
           <br>
           <%= yield %>

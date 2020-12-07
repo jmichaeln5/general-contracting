@@ -15,6 +15,7 @@ class FlashcardsTest < ApplicationSystemTestCase
     click_on "New Flashcard"
 
     fill_in "Description", with: @flashcard.description
+    fill_in "Img url", with: @flashcard.img_url
     fill_in "Title", with: @flashcard.title
     click_on "Create Flashcard"
 
@@ -27,6 +28,7 @@ class FlashcardsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @flashcard.description
+    fill_in "Img url", with: @flashcard.img_url
     fill_in "Title", with: @flashcard.title
     click_on "Update Flashcard"
 

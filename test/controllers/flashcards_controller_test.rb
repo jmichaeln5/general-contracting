@@ -17,7 +17,7 @@ class FlashcardsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create flashcard" do
     assert_difference('Flashcard.count') do
-      post flashcards_url, params: { flashcard: { description: @flashcard.description, title: @flashcard.title } }
+      post flashcards_url, params: { flashcard: { description: @flashcard.description, img_url: @flashcard.img_url, title: @flashcard.title } }
     end
 
     assert_redirected_to flashcard_url(Flashcard.last)
@@ -34,7 +34,7 @@ class FlashcardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update flashcard" do
-    patch flashcard_url(@flashcard), params: { flashcard: { description: @flashcard.description, title: @flashcard.title } }
+    patch flashcard_url(@flashcard), params: { flashcard: { description: @flashcard.description, img_url: @flashcard.img_url, title: @flashcard.title } }
     assert_redirected_to flashcard_url(@flashcard)
   end
 

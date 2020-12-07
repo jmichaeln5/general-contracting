@@ -3,6 +3,7 @@ class CreateFlashcards < ActiveRecord::Migration[6.0]
     create_table :flashcards do |t|
       t.string :title
       t.string :description
+      t.string :img_url
 
       t.timestamps
     end
